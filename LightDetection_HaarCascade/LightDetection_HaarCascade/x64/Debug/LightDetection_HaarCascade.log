@@ -1,0 +1,10 @@
+﻿  SourceHaar.cpp
+e:\cntt\doan1_v2\visualproject\lightdetection_haarcascade\lightdetection_haarcascade\sourcehaar.cpp(19): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+e:\cntt\doan1_v2\visualproject\lightdetection_haarcascade\lightdetection_haarcascade\sourcehaar.cpp(109): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+e:\cntt\doan1_v2\visualproject\lightdetection_haarcascade\lightdetection_haarcascade\sourcehaar.cpp(125): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+e:\cntt\doan1_v2\visualproject\lightdetection_haarcascade\lightdetection_haarcascade\sourcehaar.cpp(126): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  LightColor.cpp
+  Generating Code...
+e:\cntt\doan1_v2\visualproject\lightdetection_haarcascade\lightdetection_haarcascade\sourcehaar.cpp(135): warning C4715: 'trackFilteredObject': not all control paths return a value
+  LightDetection_HaarCascade.vcxproj -> E:\CNTT\DoAn1_v2\VisualProject\LightDetection_HaarCascade\x64\Debug\LightDetection_HaarCascade.exe
+  LightDetection_HaarCascade.vcxproj -> E:\CNTT\DoAn1_v2\VisualProject\LightDetection_HaarCascade\x64\Debug\LightDetection_HaarCascade.pdb (Full PDB)
