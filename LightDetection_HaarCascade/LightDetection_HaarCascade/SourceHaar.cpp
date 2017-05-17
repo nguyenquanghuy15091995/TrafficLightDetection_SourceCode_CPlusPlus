@@ -77,7 +77,9 @@ int main()
 			// Apply the classifier to the frame
 			cvtColor(mFrame, mGray, COLOR_BGR2GRAY);
 			equalizeHist(mGray, mGray);
+			//call detection.
 			classifier.detectMultiScale(mGray, vFound, 1.1, 2, 0 | CASCADE_SCALE_IMAGE, Size(30, 30));
+			//call draw function.
 			draw_locations(mFrame, vFound, Scalar(0, 255, 0), hsv_image);
 			imshow(WINDOW_NAME, mFrame);
 			count = 0;
