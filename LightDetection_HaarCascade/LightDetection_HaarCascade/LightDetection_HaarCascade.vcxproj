@@ -126,6 +126,8 @@
   <ItemGroup>
     <ClCompile Include="LightColor.cpp" />
     <ClCompile Include="SourceHaar.cpp" />
+    <ClCompile Include="SourceHaarImage.cpp" />
+    <ClCompile Include="SourceHaarRealTime.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LightColor.h" />
