@@ -48,7 +48,7 @@ void drawTrafficLights(Mat &targetImg, LightState lightState) {
 void draw_locations(Mat & img, const vector< Rect > & locations, const Scalar & color, Mat HSV);
 
 //link video and xml.
-#define VIDEO_FILE_NAME "E:\\CNTT\\DoAn1_vFinal\\TrafficLightDetection_SourceCode_CPlusPlus\\video\\TrafficLightQ7_480_1.mp4"
+#define VIDEO_FILE_NAME "E:\\CNTT\\DoAn1_vFinal\\TrafficLightDetection_SourceCode_CPlusPlus\\video\\TrafficLightQ7_480_2.mp4"
 #define CASCADE_FILE_NAME "E:\\CNTT\\DoAn1_vFinal\\TrafficLightDetection_SourceCode_CPlusPlus\\xml\\light.xml"
 #define WINDOW_NAME "WINDOW"
 
@@ -118,7 +118,7 @@ vector<LightColor> trackFilteredObject(LightColor theLight) {
 				double area = moment.m00;
 
 				//if the area is less than 20 px by 20px then it is probably just noise
-				//if the area is the same as the 3/2 of the image size, probably just a bad filter
+				//if the area is the same as the 2/3 of the image size, probably just a bad filter
 				//we only want the object with the largest area so we safe a reference area each
 				//iteration and compare it to the area in the next iteration.
 				if (area>MIN_OBJECT_AREA) {
