@@ -180,21 +180,26 @@
 //			//find the top image.
 //			if (loc->y + loc->height <= FRAME_HEIGHT / 2)
 //			{
-//				//draw the area.
-//				rectangle(img, *loc, color, 2);
+//
 //
 //				//check color position to draw traffic light.
 //				if (checkLightPosition(loc, reds))
 //				{
 //					drawTrafficLights(img, RED);
+//					//draw the area.
+//					rectangle(img, *loc, color, 2);
 //				}
 //				else if (checkLightPosition(loc, yellows))
 //				{
 //					drawTrafficLights(img, YELLOW);
+//					//draw the area.
+//					rectangle(img, *loc, color, 2);
 //				}
 //				else if (checkLightPosition(loc, greens))
 //				{
 //					drawTrafficLights(img, GREEN);
+//					//draw the area.
+//					rectangle(img, *loc, color, 2);
 //				}
 //			}
 //		}

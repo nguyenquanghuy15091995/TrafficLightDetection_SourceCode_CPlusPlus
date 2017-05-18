@@ -48,8 +48,8 @@ void drawTrafficLights(Mat &targetImg, LightState lightState) {
 void draw_locations(Mat & img, const vector< Rect > & locations, const Scalar & color, Mat HSV);
 
 //link video and xml.
-#define VIDEO_FILE_NAME "E:\\CNTT\\DoAn1_v2\\VisualProject\\LightDetection_HaarCascade\\LightDetection_HaarCascade\\TrafficVideo.mp4"
-#define CASCADE_FILE_NAME "E:\\CNTT\\DoAn1_v2\\VisualProject\\LightDetection_HaarCascade\\LightDetection_HaarCascade\\light.xml"
+#define VIDEO_FILE_NAME "E:\\CNTT\\DoAn1_vFinal\\TrafficLightDetection_SourceCode_CPlusPlus\\video\\TrafficLightQ7_480_1.mp4"
+#define CASCADE_FILE_NAME "E:\\CNTT\\DoAn1_vFinal\\TrafficLightDetection_SourceCode_CPlusPlus\\xml\\light.xml"
 #define WINDOW_NAME "WINDOW"
 
 //main
@@ -69,7 +69,7 @@ int main()
 	while (cap.read(mFrame))
 	{
 		//run interleaved.
-		if (count >= 2)
+		if (count >= 1)
 		{
 			Mat hsv_image;
 			cvtColor(mFrame, hsv_image, COLOR_BGR2HSV);
@@ -81,9 +81,10 @@ int main()
 			classifier.detectMultiScale(mGray, vFound, 1.1, 2, 0 | CASCADE_SCALE_IMAGE, Size(30, 30));
 			//call draw function.
 			draw_locations(mFrame, vFound, Scalar(0, 255, 0), hsv_image);
-			imshow(WINDOW_NAME, mFrame);
+			
 			count = 0;
 		}
+		imshow(WINDOW_NAME, mFrame);
 		count++;
 		waitKey(10);
 	}
@@ -174,21 +175,26 @@ void draw_locations(Mat & img, const vector< Rect > & locations, const Scalar & 
 			//find the top image.
 			if (loc->y + loc->height <= FRAME_HEIGHT/2)
 			{
-				//draw the area.
-				rectangle(img, *loc, color, 2);
+				
 				
 				//check color position to draw traffic light.
 				if (checkLightPosition(loc, reds))
 				{
 					drawTrafficLights(img, RED);
+					//draw the area.
+					rectangle(img, *loc, color, 2);
 				}
 				else if (checkLightPosition(loc, yellows))
 				{
 					drawTrafficLights(img, YELLOW);
+					//draw the area.
+					rectangle(img, *loc, color, 2);
 				}
 				else if (checkLightPosition(loc, greens))
 				{
 					drawTrafficLights(img, GREEN);
+					//draw the area.
+					rectangle(img, *loc, color, 2);
 				}
 			}
 		}
